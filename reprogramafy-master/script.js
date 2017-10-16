@@ -1,17 +1,16 @@
 var botao = document.getElementById("botao");
-var modal = document.querySelector(".bloco");
+// var modal = document.querySelector(".bloco");
 var fundo = document.getElementById("fundo");
 
 botao.onclick = function() {
-    modal.classList.add("visivel");
-    fundo.classList.add("visivel");
-}
+    fundo.classList.add("visivel"); /*a modal não precisa ser mostrada porque está dentro do fundo usando display block
+*/}
 fecha.onclick = function() {
-    modal.classList.remove("visivel");
     fundo.classList.remove("visivel");
 }
 
-fundo.onclick = function() {
-    modal.classList.remove("visivel");
-    fundo.classList.remove("visivel");
+fundo.onclick = function(e) { /*e é um parâmetro*/  
+    if (e.target == fundo) {
+        fundo.classList.remove("visivel");
+    }
 }
