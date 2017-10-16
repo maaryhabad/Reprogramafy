@@ -10,3 +10,8 @@ fecha.onclick = function() {
     modal.classList.remove("visivel");
     fundo.classList.remove("visivel");
 }
+
+fundo.onclick = function() {
+    modal.classList.remove("visivel");
+    fundo.classList.remove("visivel");
+}
