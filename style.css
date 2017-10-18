@@ -155,3 +155,28 @@ form > input{
     transform:none;
   }
 }
+.slider {
+  width: 100%;
+}
+.slider > ul {
+  list-style-type: none;
+  width: inherit; /*ele pega o 100% do pai, no caso, slider*/
+  padding: 0;
+  margin: 0;
+}
+
+.slider > ul > li {
+  width: inherit;
+}
+
+.slider > ul > li > img {
+  width: inherit;
+}
+
+.controles {
+  text-justify: center;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+}
+

@@ -15,8 +15,24 @@
       <button id="botao">Login</button>
     </nav>
   </header>
-  <main>
+  <section>
+    <div class="slider">
+      <ul>
+        <li class="slider-item">
+          <img src="trending.jpg" alt="">
+        </li>
+        <li class="slider-item">
+          <img src="top50mundo.jpg" alt="">
+        </li>
+      </ul>
+      <div class="controles">
+        <button id="anterior"><<</button>
+        <button id="proximo">>></button>
+      </div>
+    </div>
+  </section>
 
+  <main>
     <div id="player">
       <!-- Capa do album -->
       <figure class="capa">
@@ -29,7 +45,12 @@
 
         <!-- Controles do player -->
         <div class="player-controls">
-          <button class="botao-play"></button>
+          <button class="botao-play">
+            <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+              </svg>
+          </button>
           <audio src="https://p.scdn.co/mp3-preview/1d9fe8b793a54f64d43f6413754de5755551f5cd?cid=8897482848704f2a8f8d7c79726a70d4"></audio>
           
           <!-- Tempo da música -->
