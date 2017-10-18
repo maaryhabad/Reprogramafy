@@ -10,7 +10,7 @@ html, body {
 body {
   font-family: sans-serif;
   height: 100vh;
-  background: url('bg.jpg') no-repeat;
+  background: url('img/bg.jpg') no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -175,12 +175,17 @@ form > input{
 }
 
 .controles {
-  text-justify: center;
   position: absolute;
   top: 50%;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-
+  left: 0;
+  right: 0;
+}
+#anterior {
+  left: 0;
+  position: absolute;
+}
+#proximo {
+  right: 0;
+  position: absolute;
 }
 
