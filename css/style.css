@@ -119,17 +119,19 @@ input{
   align-self: center !important;
 }
 #fecha{
-  border: 1%;
-  color: #7f479a;
+  color: black;
   background-color: white;
-  margin-top: 20px;
- 
+  border: none;
+  font-size: 20px;
+  }
+
+form {
+  width: 100%;
 }
 form > input{
-  
+  width: 100%;
   border: solid;
   color: #7f469a;
-  padding: 10px 15px;
   border-radius: 10px;
 }
 

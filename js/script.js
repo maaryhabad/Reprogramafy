@@ -26,6 +26,8 @@ fundo.onclick = function(e) {
 var email = document.getElementById('email');
 var senha = document.querySelector('#senha');
 var formulario = document.querySelector('form');
+
+
 formulario.onsubmit = function() {
     if(email.value !== 'admin@admin.com' ||
         senha.value !== 'admin') {
@@ -39,6 +41,6 @@ formulario.onsubmit = function() {
     }
 
     localStorage.usuario = email.value;
-    
+    document.getElementById("nome").innerHTML = "'Olá ' +email";
 }
 console.log(email);
