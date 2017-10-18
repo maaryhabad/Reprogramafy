@@ -246,3 +246,15 @@ form > input{
   height: inherit;
   background: #fff;
 }
+
+#anterior, #proximo {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+}
+
+#anterior:hover, #proximo:hover {
+  color:black;
+  cursor: pointer;
+}
