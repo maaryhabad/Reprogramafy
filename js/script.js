@@ -41,6 +41,5 @@ formulario.onsubmit = function() {
     }
 
     localStorage.usuario = email.value;
-    document.getElementById("nome").innerHTML = "'Olá ' +email";
 }
 console.log(email);
