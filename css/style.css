@@ -10,7 +10,7 @@ html, body {
 body {
   font-family: sans-serif;
   height: 100vh;
-  background: url('img/bg.jpg') no-repeat;
+  background: url("img/bg.jpg") no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -189,3 +189,9 @@ form > input{
   position: absolute;
 }
 
+.slider-item {
+  display: none;
+}
+.slider-item .active {
+  display: block;
+}
