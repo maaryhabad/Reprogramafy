@@ -157,6 +157,7 @@ form > input{
 }
 .slider {
   width: 100%;
+  position: relative;
 }
 .slider > ul {
   list-style-type: none;
@@ -177,6 +178,9 @@ form > input{
   text-justify: center;
   position: absolute;
   top: 50%;
-  display: inline-block;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
 }
 
