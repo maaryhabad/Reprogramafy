@@ -1,16 +1,44 @@
 var botao = document.getElementById("botao");
-// var modal = document.querySelector(".bloco");
+var modal = document.querySelector(".bloco");
 var fundo = document.getElementById("fundo");
+var fechar = document.getElementById("fechar");
+
 
 botao.onclick = function() {
-    fundo.classList.add("visivel"); /*a modal não precisa ser mostrada porque está dentro do fundo usando display block
-*/}
+    modal.classList.add("visivel");
+    fundo.classList.add("visivel");
+    
+}
 fecha.onclick = function() {
+    modal.classList.remove("visivel");
     fundo.classList.remove("visivel");
 }
 
-fundo.onclick = function(e) { /*e é um parâmetro*/  
+fundo.onclick = function(e) {
+    console.log(e);
     if (e.target == fundo) {
+        modal.classList.remove("visivel");
         fundo.classList.remove("visivel");
     }
+    
 }
+// Login
+var email = document.getElementById('email');
+var senha = document.querySelector('#senha');
+var formulario = document.querySelector('form');
+formulario.onsubmit = function() {
+    if(email.value !== 'admin@admin.com' ||
+        senha.value !== 'admin') {
+        alert('Email errado');
+        modal.classList.add('erro');
+        
+        setTimeout(function() {
+            modal.classList.remove('erro');
+        }, 1000);
+        return false;
+    }
+
+    localStorage.usuario = email.value;
+    
+}
+console.log(email);
