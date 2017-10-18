@@ -9,7 +9,7 @@ botao.onclick = function() {
     fundo.classList.add("visivel");
     
 }
-fecha.onclick = function() {
+fechar.onclick = function() {
     modal.classList.remove("visivel");
     fundo.classList.remove("visivel");
 }
