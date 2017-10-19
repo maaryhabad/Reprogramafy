@@ -134,3 +134,19 @@ for ( i = 0; i < playlist.length; i++) {
         tocado.style.width = 0;
     }
 }
+
+var pesquisaInput = document.querySelector("#pesquisa"); /*pega todo o documento e procura*/
+
+pesquisaInput.onkeydown = function() {
+    console.log(this);
+
+    var lis = document.querySelectorAll("#playlist li"); 
+    for (var i = 0; i < lis.length; i++) {
+        var titulo = lis[i].querySelector("h3");
+        if (titulo.innerText.search(this.value) > -1) {
+            console.log("tem uma música com esse nome");
+        } else {
+            console.log("NÃO tem uma música com esse nome");
+        }
+    }
+}
