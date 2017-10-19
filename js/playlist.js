@@ -128,6 +128,9 @@ for ( i = 0; i < playlist.length; i++) {
 
         console.log(audio)
         audio.pause();
-
+        botaoPlay.classList.remove("paused");
+        botaoPlay.classList.add("play");
+        var tocado = document.querySelector('.tocado');
+        tocado.style.width = 0;
     }
 }

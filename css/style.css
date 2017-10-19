@@ -265,6 +265,7 @@ form > input{
 
 #playlist ul {
   padding: 0;
+
 }
 
 #playlist li {
@@ -328,3 +329,14 @@ Impar - odd
 #nome {
   margin: 0;
 }
+h1 {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+.scroll { 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    white-space: nowrap;
+    margin-bottom: 20px;
+} 
