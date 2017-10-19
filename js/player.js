@@ -1,17 +1,22 @@
 var botaoPlay = document.querySelector('.botao-play');
 var audio = document.querySelector('#player audio');
 
-
 botaoPlay.onclick = function() {
-    if(audio.paused) {
-        audio.play();
-    } else {
-        audio.pause();
-    }
-}
+            
+                if(audio.paused) {
+                    botaoPlay.classList.add("paused");
+                    botaoPlay.classList.remove("play");
+                    audio.play();
+                } else {
+                    botaoPlay.classList.remove("paused");
+                    botaoPlay.classList.add("play");
+                    audio.pause();
+                }  
+            }
 
  audio.onplay = function() {
     console.log('DEU PLAY!!!!'); 
+    botaoPlay
 }
  audio.onpause = function() {
     console.log('DEU PAUSE!!!!'); 
@@ -34,7 +39,5 @@ audio.ontimeupdate = function() {
         data.getMinutes ().toString().padStart(2, '0')
         + ':' + data.getSeconds().toString().padStart(2, '0');
 }
-audio.onloadeddata = function() {
 
-}
 

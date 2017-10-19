@@ -109,5 +109,25 @@ for ( i = 0; i < playlist.length; i++) {
     div.appendChild(capa)
     div.appendChild(album);
     
+    var player = document.querySelector("#player");
 
+    li.setAttribute('data-id', i);
+    
+    li.onclick = function() {
+        var audio = document.querySelector("#player audio");
+        var musica = document.getElementById("nome");
+        var capa = document.querySelector(".capaAlbum");
+        var artista = document.getElementById("artista");
+
+        var id = this.getAttribute('data-id');
+
+        capa.src = playlist[id].album.cover;
+        audio.src = playlist[id].preview_url;
+        musica.innerText = playlist[id].name;
+        artista.innerText = playlist[id].artists;   
+
+        console.log(audio)
+        audio.pause();
+
+    }
 }

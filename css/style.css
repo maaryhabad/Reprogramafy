@@ -212,17 +212,20 @@ form > input{
 #player .musica {
   width: 100%;
 }
-#player .musica h1 {
-  margin-bottom: 40px;
-}
 #player .botao-play {
   width: 60px;
   height: 60px;
   color: #fff;
-  background: url(../play.svg);
-  background-size: cover;
   border: none;
   margin-bottom: 20px;
+}
+.play {
+  background: url(../play.svg);
+  background-size: cover;
+}
+.paused {
+  background: url(../pause.svg);
+  background-size: cover;
 }
 #player .player-tempo {
   width: 100%;
@@ -269,6 +272,7 @@ form > input{
   padding: 12px;
   width: 400px;
   height: 450px;
+  cursor: pointer;
 }
 /*
 Par - even 
@@ -312,4 +316,15 @@ Impar - odd
 }
 .container {
   text-align: center;
+}
+.musica {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+#artista {
+  margin-top: 10px;
+}
+#nome {
+  margin: 0;
 }
