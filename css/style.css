@@ -267,6 +267,8 @@ form > input{
 #playlist li {
   list-style: none;
   padding: 12px;
+  width: 400px;
+  height: 450px;
 }
 /*
 Par - even 
@@ -275,8 +277,39 @@ Impar - odd
 
 #playlist li:nth-child(odd) {
   background: rgba(0, 0, 0, .5);
+  color: white;
 }
+
+#playlist li:nth-child(even) {
+  background: rgba(255, 255, 255, .5);
+  color: black;
+}
+
 #playlist h3 {
   margin: 0;
   margin-bottom: 4px;
+}
+.albumCover {
+  border-radius: 2000px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.h3Size {
+  padding-bottom: 2%;
+  text-align: center;
+}
+.spanSize {
+  text-align: center;
+  display: block;
+}
+.container {
+  text-align: center;
 }

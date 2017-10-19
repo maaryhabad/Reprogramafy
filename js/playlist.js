@@ -1,4 +1,4 @@
-[ //JSON (JavaScript Object Notation) -guarda os dados
+var playlist = [ //JSON (JavaScript Object Notation) -guarda os dados
   {
     "album": {
       "name": "Is That For Me",
@@ -39,7 +39,7 @@
         "https://i.scdn.co/image/f2e54909bc9c038b107b47eb20e968351afd18fd"
     },
     "artists": "Cheat Codes, Fetty Wap, CVBZ",
-    "name": "Feels Great (feat. Fetty Wap & CVBZ)",
+    "name": "Feels Great",
     "preview_url":
       "https://p.scdn.co/mp3-preview/1a53268241605871a4c8af82c634f5b81d751996?cid=8897482848704f2a8f8d7c79726a70d4"
   },
@@ -72,8 +72,42 @@
         "https://i.scdn.co/image/4a6f1c7139f25b3469ca97dd72fde32eb72a6ba2"
     },
     "artists": "Silva",
-    "name": "Noturna (Nada de Novo Na Noite) - Ao Vivo",
+    "name": "Noturna (Nada de Novo Na Noite)",
     "preview_url":
       "https://p.scdn.co/mp3-preview/0d5e194c3668ec266f8845c768776be820a47e66?cid=8897482848704f2a8f8d7c79726a70d4"
   }
 ]
+
+var playlistUl = document.querySelector("#playlist ul")
+
+for ( i = 0; i < playlist.length; i++) {
+    var li = document.createElement("li");
+    var div = document.createElement("div");
+    var h3 = document.createElement("h3");
+    var artistas = document.createElement("span");
+    var album = document.createElement("span");
+    var capa = document.createElement("img");
+    
+    div.classList.add("container");
+    capa.classList.add("albumCover");
+    playlistUl.classList.add("info");
+    album.classList.add("center");
+    h3.classList.add("h3Size");
+    artistas.classList.add("spanSize");
+    album.classList.add("spanSize");
+
+
+    h3.innerText = playlist[i].name;
+    album.innerText = playlist[i].album.name;
+    artistas.innerText = playlist[i].artists;
+    capa.src = playlist[i].album.cover;
+
+    playlistUl.appendChild(li); /*cria novas li dentro da UL*/
+    li.appendChild(div);
+    div.appendChild(h3);
+    div.appendChild(artistas);
+    div.appendChild(capa)
+    div.appendChild(album);
+    
+
+}
