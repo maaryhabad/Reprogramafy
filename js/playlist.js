@@ -137,16 +137,21 @@ for ( i = 0; i < playlist.length; i++) {
 
 var pesquisaInput = document.querySelector("#pesquisa"); /*pega todo o documento e procura*/
 
-pesquisaInput.onkeydown = function() {
+pesquisaInput.onkeyup = function() {
     console.log(this);
 
     var lis = document.querySelectorAll("#playlist li"); 
+    var scroll = document.querySelector(".scroll");
+
     for (var i = 0; i < lis.length; i++) {
         var titulo = lis[i].querySelector("h3");
-        if (titulo.innerText.search(this.value) > -1) {
+        if (titulo.innerText.toLowerCase()  .search(this.value.toLowerCase()) > -1) {
             console.log("tem uma música com esse nome");
         } else {
             console.log("NÃO tem uma música com esse nome");
+            lis[i].style.display = "none";
+            scroll.classList.add("scroll_hid");
+            
         }
     }
 }

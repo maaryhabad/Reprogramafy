@@ -348,6 +348,9 @@ h1 {
     margin-bottom: 20px;
     margin-left: 20px;
 } 
+.scroll_hid {
+  overflow-x: hidden!;
+}
 ul {
   margin-left: 20px;
 }
