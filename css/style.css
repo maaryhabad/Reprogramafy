@@ -51,7 +51,7 @@ main {
   justify-content: center;
   padding: 0 20px;
 }
-.bloco{
+.blocoLogin , .blocoCadastro{
   width: 300px;
   height: 500px;
   background-color: white;
@@ -72,16 +72,12 @@ main {
   align-items: flex-end;
   margin: 10%;
 }
-form{
-  display: flex !important;
-  flex-direction: column !important;
-  margin-top: 20%;
-}
+
 input{
   width: 250px;
   height: 40px;
   border-radius: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-left: 10px;
 }
 #log{
@@ -96,12 +92,12 @@ input{
   display: flex;
   justify-content: flex-end;
 }
-.bloco.visivel{
+.blocoLogin.visivel , .blocoCadastro.visivel{
   display: block;
   position: relative;
 
 }
-#fundo{
+#fundoLogin{
   display: none;
   position: fixed;
   top: 0;
@@ -110,12 +106,25 @@ input{
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
-#fundo.visivel {
+#fundoCadastro{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#fundoLogin.visivel {
   display: flex;
-  
+}
+
+#fundoCadastro.visivel {
+  display: flex;
 }
 .imagem{
-  margin-top: 10%;
+  margin-top: 5%;
   align-self: center !important;
 }
 #fecha{
@@ -127,6 +136,9 @@ input{
 
 form {
   width: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 10%;
 }
 form > input{
   width: 100%;
@@ -135,7 +147,7 @@ form > input{
   border-radius: 10px;
 }
 
-#fundo > form > button.hover{
+form > button.hover{
   cursor: pointer;
 }
 .erro{
@@ -366,4 +378,19 @@ ul {
 }
 #busca {
   margin: 10px 0 10px 20px !important;
+}
+.opcao {
+  color: black;
+  justify-content: center;
+  text-align: center;
+}
+.check {
+  margin-bottom: 20px;
+  height: 20px;
+}
+.opcao1 , opcao2 {
+  display: flex;
+}
+.opcao1 > input, .opcao2 > input {
+  width:67px;
 }

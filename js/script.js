@@ -1,45 +1,83 @@
-var botao = document.getElementById("botao");
-var modal = document.querySelector(".bloco");
-var fundo = document.getElementById("fundo");
-var fechar = document.getElementById("fechar");
+var login = document.getElementById("login");
+var cadastro = document.getElementById("cadastro");
 
+var modalLogin = document.querySelector(".blocoLogin");
+var fundoLogin = document.getElementById("fundoLogin");
+var fecharLogin = document.getElementById("fecharLogin");
 
-botao.onclick = function() {
-    modal.classList.add("visivel");
-    fundo.classList.add("visivel");
+var modalCadastro = document.querySelector(".blocoCadastro");
+var fundoCadastro = document.getElementById("fundoCadastro");
+var fecharCadastro = document.getElementById("fecharCadastro");
+// var usuario;
+// var email = document.getElementById('email');
+// var senha = document.querySelector('#senha');
+var formulario = document.querySelector('form');
+
+login.onclick = function() {
+    modalLogin.classList.add("visivel");
+    fundoLogin.classList.add("visivel");
+
+    formulario.onsubmit = function() {
+        if(email.value !== 'admin@admin.com' ||
+            senha.value !== 'admin') {
+            alert('Email errado');
+            modal.classList.add('erro');
+            
+            setTimeout(function() {
+                modal.classList.remove('erro');
+                }, 1000);
+            return false;
+        }
+
+        localStorage.usuario = email.value;
+    }
+console.log(email);
+}
+
+cadastro.onclick = function() {
+    modalCadastro.classList.add("visivel");
+    fundoCadastro.classList.add("visivel");
+
+    formulario.onsubmit = function() {
+        if(email.value !== 'admin@admin.com' ||
+            senha.value !== 'admin') {
+            alert('Email errado');
+            modal.classList.add('erro');
+            
+            setTimeout(function() {
+                modal.classList.remove('erro');
+                }, 1000);
+            return false;
+        }
+
+        localStorage.usuario = email.value;
+    }
+    console.log(email);
+}
+
+fecharLogin.onclick = function() {
+    modalLogin.classList.remove("visivel");  
+    fundoLogin.classList.remove("visivel");  
+}
+fecharCadastro.onclick = function() {
+    modalCadastro.classList.remove("visivel");
+    fundoCadastro.classList.remove("visivel");
+}
+fundoLogin.onclick = function(e) {
+    console.log(e);
+    if (e.target == fundoLogin) {
+        modalLogin.classList.remove("visivel");
+        fundoLogin.classList.remove("visivel");
+    }
     
 }
-fechar.onclick = function() {
-    modal.classList.remove("visivel");
-    fundo.classList.remove("visivel");
-}
-
-fundo.onclick = function(e) {
+fundoCadastro.onclick = function(e) {
     console.log(e);
-    if (e.target == fundo) {
-        modal.classList.remove("visivel");
-        fundo.classList.remove("visivel");
+    if (e.target == fundoCadastro) {
+        modalCadastro.classList.remove("visivel");
+        fundoCadastro.classList.remove("visivel");
     }
     
 }
 // Login
-var email = document.getElementById('email');
-var senha = document.querySelector('#senha');
-var formulario = document.querySelector('form');
 
-
-formulario.onsubmit = function() {
-    if(email.value !== 'admin@admin.com' ||
-        senha.value !== 'admin') {
-        alert('Email errado');
-        modal.classList.add('erro');
-        
-        setTimeout(function() {
-            modal.classList.remove('erro');
-        }, 1000);
-        return false;
-    }
-
-    localStorage.usuario = email.value;
-}
-console.log(email);
